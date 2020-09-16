@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<select>
+    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+    <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+    <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+    <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+</select>
+<div>
+    Month: <span title="Answer"></span>
+</div>
+</body>
+<script>
+    const months = ["January", "February", "March", 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    $("select").on("change", (event) =>  {
+        const index = window.parseInt(event.target.value);
+        $("['Answer']").html(months[index - 1]);
+    });
+</script>
+</html>

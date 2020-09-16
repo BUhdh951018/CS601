@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<title>Beer Mapping Example</title>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<style>
+		#requiredLabel
+		{
+			color:red;	
+			font-weight: bold;
+		}
+	</style>
+
+
+</head>
+	<body>
+		<div>
+			<label id="requiredLabel"> Beer Name*: </label>
+			<input id="beerName" type="text" placeholder="Enter beer name here" required/>
+			<button id="searchButton">Submit</button>
+		</div>
+
+		<h2 id="resultsHeader" >Results</h2>
+
+		<div id="resultsDiv"/>
+
+		<script type="text/javascript">
+
+
+
+
+
+	        $("#searchButton").click(function(event) {
+
+				$("#resultsDiv").empty();
+
+				let beerName = $("#beerName").val().replace(' ', '+');
+				
+				if(beerName	!= "")
+				{
+
+					var url = "https://beermapping.com/webservice/locquery/5e0156078f7e803105f748d2e2d6e297/" +beerName+ "&s=json";
+
+
+			    	fetch(url)
+					.then(res => res.json())
+					.then(data => {
+						$.each(data, function (i, beer) 
+						{
+							if(beer.name != "No locations Found")
+							{
+								let beerlocation = 	"<b>Brewery Name:</b> " + beer.name + "</br>" +
+								 				   	"<b>Address:</b> " + beer.street + "</br>"  +
+													beer.city + ", " + beer.state + " " + beer.zip;
+
+								$("#resultsDiv").append("<p> " + beerlocation + "</p>");
+							}
+							else
+							{
+								$("#resultsDiv").append("<p> No Results Found </p>");
+							}
+
+
+						});
+					}).catch(function(error)
+					{
+						$("#resultsDiv").append("<p> No Results Found </p>");
+						alert(error);
+					});
+				}
+				else
+				{
+					alert("Please enter a beer name.");
+				}
+
+	        });
+
+		</script>
+	</body>
+
+
+
+
+</html>

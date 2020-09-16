@@ -1,0 +1,13 @@
+Question 7
+
+Why flexbox:
+1. flexbox require less typing than normal table element
+2. we change the order of the element without changing the HTML dom by using flexbox, while it's impossible with tables
+
+Why not float:
+1. flexbox is easier to understand and write than just using 'float'
+2. flexbox is more powerful
+
+Why not absolute position:
+1. this lacks flexibility, which means if there is slight changes you have to change a lot of code
+2. this way your code would be difficult to understand and reuse

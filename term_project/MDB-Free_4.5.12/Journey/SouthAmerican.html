@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South American</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        a {
+            color: white;
+        }
+
+        /*nav_panel*/
+        #panel {
+            height: 300px;
+            background-color: #212121;
+            display: none;
+            color: white
+        }
+
+        #panel>.row {
+            padding: 30px;
+        }
+
+        .panel_slide {
+            border-right: 1px solid #cfd8dc;
+            float: left;
+            height: 250px;
+        }
+
+        .nav_p {
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        /*underline*/
+        .underline {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .underline:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: all .3s;
+        }
+
+        .underline:hover:before {
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        /*top*/
+        #top {
+            background: url(../img/hainan/3.webp);
+            height: 377px;
+        }
+
+        .top2 {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            height: 100px;
+            /*margin-top:99px;*/
+        }
+
+        .top2_title {
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .top2_select {
+            margin-left: 50px;
+        }
+
+        #content {
+            margin-left: 300px;
+            height: 2000px;
+            width: 1000px;
+            margin-right: 300px;
+        }
+
+        .content_title {
+            margin-top: 50px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .img {
+            text-align: center;
+        }
+
+        #map {
+            margin: 5px;
+            width: 970px;
+            height: 600px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="../index.html" style="margin-left:300px">South American</a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <form class="form-inline">
+                <div class="md-form my-0" style="margin-left:600px">
+                    <i class="fa fa-search" aria-hidden="true" style="color:white"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="flip" href="#">menu
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
+
+    <div id="panel">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="nav_p">CITY</p>
+                <a href="">
+                    <p class="underline">Guyana&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+
+                <a href="">
+                    <p class="underline">Suriname&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="SouthAmerican/Colombia.html">
+                    <p class="underline">Colombia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="SouthAmerican/Trans/Colombia.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="SouthAmerican/Ecuador.html">
+                    <p class="underline">Ecuador&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="SouthAmerican/Trans/Ecuador.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Peru&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="SouthAmerican/Trans/Peru.html"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="">
+                    <p class="underline">Chile&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="SouthAmerican/Trans/Chile.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="SouthAmerican/Bolivia.html">
+                    <p class="underline">Bolivia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="SouthAmerican/Trans/Bolivia.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Uruguay&nbsp;<i class="fa fa-angle-right"
+                            aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="SouthAmerican/Trans/Uruguay.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">AIRLINE</p>
+                <a href="https://www.avianca.com/us/en/">
+                    <p class="underline">Avianca&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.latam.com/en_us/">
+                    <p class="underline">LATAM Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+                <a href="https://www.vivaair.com/co/en">
+                    <p class="underline">Viva Air&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.tame.com.ec/index.php/en/">
+                    <p class="underline">TAME&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.starperu.com/es/#">
+                    <p class="underline">Star Perú&nbsp;<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="https://www.peruvian.pe/pe/world">
+                    <p class="underline">Peruvian Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.skyairline.com/english">
+                    <p class="underline">Sky Airline&nbsp;<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></p>
+                </a>
+                <a href="https://jetsmart.com/cl/es/">
+                    <p class="underline">JetSmart&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="http://dapairline.com/">
+                    <p class="underline">Aerovías DAP&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.boa.bo/BoAWebSite/">
+                    <p class="underline">Boliviana De Aviacion&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="https://www.amaszonas.com/en-us/">
+                    <p class="underline">Línea Aérea Amaszonas&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+                <a href="https://www.aerolineas.com.ar/">
+                    <p class="underline">Aerolíneas Argentinas&nbsp;<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.aircentury.com/en/">
+                    <p class="underline">Surinam Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.flyslm.com/en/">
+                    <p class="underline">Fly All Ways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://flyallways.com/">
+                    <p class="underline">FlyMontserrat&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="top" class="container-fluid">
+        <div class="row" style="height:280px;">
+
+        </div>
+        <div class="row top2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 top2_title">
+                        <h2>South American</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="content">
+        <div class="content_title">
+            <h1>Map of Carribbean</h1>
+            <div id="map"></div>
+        </div>
+        <div class="content_title">
+            <h1>Wuzhizhou Island</h1>
+            <p>Wuzhizhou Island is located in Haitang Bay in the north of Sanya City. It is opposite to Nanwan Monkey
+                Island in the
+                north and Yalong Bay in the first bay of Meiyutianxia in the south. Wuzhizhou Island is 2.7 kilometers
+                away from
+                the coastline and has a radius of 1.48 square kilometers. It is irregularly butterfly-shaped, with a
+                length of
+                1,400 meters from east to west and 1,100 meters from north to south.
+                It is 30 kilometers away from Sanya City and 38 kilometers away from Phoenix Airport. It is close to the
+                expressway
+                from Haikou to Sanya. The location is superior and the transportation is convenient. Wuzhizhou Island is
+                one of the
+                few small islands with fresh water resources and rich vegetation around Hainan Island. There are more
+                than 2,000
+                kinds of plants and a wide variety.</p>
+            <div class="img"><img src="../img/hainan/4.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 5.5,
+                center: {
+                    lat: 19,
+                    lng: -69
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [{
+                    lat: 25.038889,
+                    lng: -77.466111,
+                    code: 'Bahamas'
+                }, /*NAS*/
+                {
+                    lat: 21.773611,
+                    lng: -72.265833,
+                    code: 'Turks and Caicos Islands'
+                }, /*PLS*/
+                {
+                    lat: 18.58,
+                    lng: -72.2925,
+                    code: 'Haiti'
+                }, /*PAP*/
+                {
+                    lat: 17.935556,
+                    lng: -76.7875,
+                    code: 'Jamaica'
+                }, /*KIN*/
+                {
+                    lat: 18.431944,
+                    lng: -69.671944,
+                    code: 'Dominican Republic'
+                }, /*SDQ*/
+                {
+                    lat: 18.439167,
+                    lng: -66.001944,
+                    code: 'Puerto Rico'
+                }, /*SJU*/
+                {
+                    lat: 18.337222,
+                    lng: -64.973333,
+                    code: 'US Virgin'
+                }, /*STT*/
+                {
+                    lat: 18.445556,
+                    lng: -64.543056,
+                    code: 'UK Virgin'
+                }, /*EIS*/
+                {
+                    lat: 18.040833,
+                    lng: -63.109444,
+                    code: 'Sint Maarten'
+                }, /*SXM*/
+                {
+                    lat: 17.311389,
+                    lng: -62.718611,
+                    code: 'Saint Kitts and Nevis'
+                }, /*SKB*/
+                {
+                    lat: 17.136667,
+                    lng: -61.793056,
+                    code: 'Antigua and Barbuda'
+                }, /*ANU*/
+                {
+                    lat: 16.791389,
+                    lng: -62.193333,
+                    code: 'Montserrat'
+                }, /*MNI*/
+                {
+                    lat: 15.546944,
+                    lng: -61.3,
+                    code: 'Dominica'
+                }, /*DOM*/
+                {
+                    lat: 13.074722,
+                    lng: -59.4925,
+                    code: 'Barbados'
+                }, /*BGI*/
+                {
+                    lat: 12.004167,
+                    lng: -61.786111,
+                    code: 'Grenada'
+                }, /*GND*/
+            ];
+
+            var infowindow = new google.maps.InfoWindow();
+
+            for (var i = 0; i < 15; i++) {
+
+                var currentPath = [];
+                currentPath.push(flightPlanCoordinates[i]);
+                var temp = flightPlanCoordinates[i].code;
+
+                //var location = new google.maps.LatLng(currentPath.lat, currentPath.lng);
+                var marker = new google.maps.Marker({
+                    position: flightPlanCoordinates[i],
+                    map: map,
+                    title: flightPlanCoordinates[i].code
+                });
+                addContent(marker, temp, infowindow);
+            }
+        }
+
+        function addContent(marker, temp, infowindow) {
+            var contentString = '<div>' + '<a href="Carribbean/Trans/' + temp + '.html" style="color:black">' + temp +
+                '</a>' + '</div>';
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent(contentString);
+                infowindow.open(map, marker);
+            })
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap&language=en">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

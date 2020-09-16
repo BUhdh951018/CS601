@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Turks and Caicos Islands</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Courgette&display=swap" rel="stylesheet"
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // This example creates a 2-pixel-wide red polyline showing the path of
+        // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+        // Australia which was made by Charles Kingsford Smith.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {
+                    lat: 21,
+                    lng: -72
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [{
+                    lat: 21.773611,
+                    lng: -72.265833
+                }, /*PLS*/
+                {
+                    lat: 26.0725,
+                    lng: -80.152778,
+                    code: 'Broward County, FL'
+                }, /*FLL*/
+                {
+                    lat: 41.978611,
+                    lng: -87.904722,
+                    code: 'Chicago, IL'
+                }, /*ORD*/
+                {
+                    lat: 43.676667,
+                    lng: -79.630556,
+                    code: 'Toronto, Canada'
+                }, /*YYZ*/
+                {
+                    lat: 40.639722,
+                    lng: -73.778889,
+                    code: 'New York, NY'
+                }, /*JFK*/
+                {
+                    lat: 40.6925,
+                    lng: -74.168611,
+                    code: 'New York, NY'
+                }, /*EWR*/
+                {
+                    lat: 39.871944,
+                    lng: -75.241111,
+                    code: 'Philadelphia, PA'
+                }, /*PHL*/
+                {
+                    lat: 35.213889,
+                    lng: -80.943056,
+                    code: 'Charlotte, NC'
+                }, /*CLT*/
+                {
+                    lat: 33.636667,
+                    lng: -84.428056,
+                    code: 'Atlanta, GA'
+                }, /*ATL*/
+                {
+                    lat: 25.793333,
+                    lng: -80.290556,
+                    code: 'Miami, FL'
+                }, /*MIA*/
+                {
+                    lat: 25.038889,
+                    lng: -77.466111,
+                    code: 'Nassu, Panama'
+                }, /*NAS*/
+                {
+                    lat: 17.935556,
+                    lng: -76.7875,
+                    code: 'Kingston, Jamaica'
+                }, /*KIN*/
+                {
+                    lat: 19.733056,
+                    lng: -72.194722,
+                    code: 'Cap-Haitien, Haiti'
+                }, /*CAP*/
+                {
+                    lat: 18.58,
+                    lng: -72.2925,
+                    code: 'Port-au-Prince, Haiti'
+                }, /*PAP*/
+                {
+                    lat: 45.470556,
+                    lng: -73.740833,
+                    code: 'Montreal, Canada'
+                }, /*YUL*/
+                {
+                    lat: 17.136667,
+                    lng: -61.793056,
+                    code: 'St.Jhon\'s, Antigua and Barbuda'
+                }, /*ANU*/
+            ];
+            var currentPath = [];
+            var infowindow = new google.maps.InfoWindow();
+            for (var i = 0; i < 15; i++) {
+                currentPath.push(flightPlanCoordinates[0]);
+                currentPath.push(flightPlanCoordinates[i + 1]);
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 1
+                });
+
+                var marker = new google.maps.Marker({
+                    position: flightPlanCoordinates[i+1],
+                    map: map,
+                    title: flightPlanCoordinates[i+1].code
+                })
+
+                var contentString = flightPlanCoordinates[i+1].code;
+                var temp = contentString.split(",");
+                var content = '<div>' + '<h1 style="font-family: Comfortaa, cursive">' + temp[1] + '</h1>' +
+                    '<h2 style="font-family: Courgette, cursive">' + temp[0] + '</h2>' + '</div>';
+                addContent(map, marker, content, infowindow);
+
+                flightPath.setMap(map);
+            }
+        }
+
+        function addContent(map, marker, content, infowindow) {
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(content);
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap">
+    </script>
+</body>
+
+</html>

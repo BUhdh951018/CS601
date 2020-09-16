@@ -1,0 +1,100 @@
+<!-- Don Charest    CS601 Web App Dev   10/04/2018
+    
+Using jQuery Core 3.x, create an HTML page that meets these requirements:
+    15 paragraph's
+    3 h3's
+    12 span's
+Mix up the *elements you created with:
+    class selectors
+    attribute selectors
+    element selectors
+    ID selectors
+    Direct descendant selectors
+    descendant selectors
+    Adjacency selectors
+Find them using jQuery core API methods and display your counts in a footer element with a table 
+or list that has your counts.
+-->
+
+<!Doctype html>
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+    </head>
+
+    <body>
+        <div class='class1'>
+            <h3 id="h3_1">The Way the West Was Won</h3>
+            <p>The first paragraph contained several typographical errors.
+                <span>This is span one.</span></p>
+            <p>The second paragraph was long.
+                <span>span two.</span></p>
+            <p>The third paragraph two desribes the era.
+                <span>This is span three.</span></p>
+            <p>The fourth paragraph was funny.
+                <span>This is span four.</span></p>
+            <p>The fith paragraph wsa the last in div class_1.</p>
+        </div>
+
+        <div class='class2'>
+            <h3 id="h2_2">The rail lines were completed</h3>
+            <p>Some random text.
+                <span>This is the fifth Span.</span></p>
+            <p>One is the loneliest number.
+                <span>the sixth span.</span></p>
+            <p>Two peas io a pod.
+                <span>the seventh span.</span></p>
+            <p>Three is a croud.
+                <span>The eight span.</span></p>
+            <p>Four is for something.</p>
+        </div>
+
+        <div class='class3'>
+            <h3 id="h3_3">The final Frontier</h3>
+            <p>The begining of the end.
+                <span>The ninth span.</span></p>
+            <p>Another day in paradise.
+                <span>The tenth span.</span></p>
+            <p>Nothing but trouble.
+                <span>The eleventh span.</span></p>
+            <p>Escape from Alcatraz.
+                <span>The twelth span.</span></p>
+            <p>Silence of the lambs.</p>
+        </div>
+
+        <footer>
+            <hr>
+            <ul>
+                <li id="h3Count"></li>
+                <li id="pCount"></li>
+                <li id="spanCount"></li>
+
+            </ul>
+        </footer>
+
+        <script>
+            var numH3 = $("h3").size(); // select by TYPE
+            $("#h3Count").text("The number of h3's = " + numH3);
+            
+            var numPinC1 = $(".class1").find('p').size(); // select by class, using atttribute
+            var numPinC2 = $(".class2").find('p').size(); // select by class
+            var numPinC3 = $(".class1 + .class2 + .class3").find('p').size(); // select by adjacency using class
+            $("#pCount").text("The total number of paragraphs = " + (numPinC1 + numPinC2 + numPinC3));
+
+            var numSpan = $("p > span").size(); // search by attribute + direct decendant
+            $("#spanCount").text("The total number of span's = " + numSpan);
+
+
+            var target1 = $(".class2 p").first(); // first method
+            console.log( "first method: ", target1.text() );
+
+            var target2 = $(".class1 + .class2 + .class3"); // select by adjancency
+            console.log( " select by adjancency: ", target2.text() );
+        </script>
+        
+    </body>
+</html>

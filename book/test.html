@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="test.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container" id="content">
+    <div style="margin-top:30px">
+        <i class="fa fa-plane" aria-hidden="true" style="font-size: 20px;margin-left:15px;">
+            ABOUT THIS FLIGHT
+        </i>
+    </div>
+    <form action="">
+        <div class="row">
+            <div class="input-group input-group-lg col-md-12" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">DATE</span>
+                </div>
+                <input id="date" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">FLIGHT#</span>
+                </div>
+                <input id="flight" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">DEP-ARR</span>
+                </div>
+                <input id="d-a" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-lg col-md-12" style="margin-top:10px">
+                <input id="times" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">FLIGHT WITH</span>
+                </div>
+                <input id="code" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-12" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">SEAT#</span>
+                </div>
+                <input id="seat" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">CABIN CLASS</span>
+                </div>
+                <input id="cabin" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-12" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">DEP GATE</span>
+                </div>
+                <input id="gate_d" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">ARR GATE</span>
+                </div>
+                <input id="gate_a" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+        </div>
+
+        <div style="margin-top:30px">
+            <i class="fa fa-plane" aria-hidden="true" style="font-size: 20px;margin-left:15px;">
+                FLIGHT INFO
+            </i>
+        </div>
+
+        <div class="row">
+            <div class="input-group input-group-lg col-md-12" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">AIRCRAFT TYPE</span>
+                </div>
+                <input id="aricraft" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">REGO</span>
+                </div>
+                <input id="rego" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-12" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">BLOCK TIME</span>
+                </div>
+                <input id="time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">DISTANCE FLOWN</span>
+                </div>
+                <input id="distance" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">CRUISING ALTITUDE</span>
+                </div>
+                <input id="altitude" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+        </div>
+
+        <div style="margin-top:30px">
+            <i class="fa fa-plane" aria-hidden="true" style="font-size: 20px;margin-left:15px;">
+                DEPARTURE INFO
+            </i>
+            <i class="fa fa-plane" aria-hidden="true" style="font-size: 20px;margin-left:300px;">
+                ARRIVAL INFO
+            </i>
+        </div>
+
+        <div class="row">
+            <div class="input-group input-group-lg col-md-6" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">DEP PARKING BAY</span>
+                </div>
+                <input id="bay_d" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-6" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">ARR PARKING BAY</span>
+                </div>
+                <input id="bay_a" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-6" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">OFF CHOCKS</span>
+                </div>
+                <input id="chock_off" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-6" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">ON CHOCKS</span>
+                </div>
+                <input id="chock_on" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-6" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">TAKE-OFF RUNWAY</span>
+                </div>
+                <input id="runaway_d" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="input-group input-group-lg col-md-6" style="margin-top:10px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">LANDING RUNWAY</span>
+                </div>
+                <input id="runaway_a" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg">
+            </div>
+        </div>
+
+        <input id="add" type="button" value="Add Invoice" onclick="addTest()">
+        <input id="reset" type="reset" value="Reset">
+    </form>
+
+    <div style="margin-top:30px">
+        <p>about this flight</p>
+        <table class="table table-bordered table-striped" id="flight">
+            <thead>
+                <tr>
+                    <td>DATE</td>
+                    <td>FLIGHT#</td>
+                    <td>DEP-ARR</td>
+                    <td>TIMES</td>
+                    <td>FLIGHT WITH</td>
+                    <td>SEAT#</td>
+                    <td>CABIN</td>
+                    <td>GATE(DEP)</td>
+                    <td>GATE(ARR)</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p>flight info</p>
+        <table class="table table-bordered table-striped" id="plane">
+            <thead>
+                <tr>
+                    <td>AIRCRAFT</td>
+                    <td>REGO</td>
+                    <td>BLOCK TIME</td>
+                    <td>DISTANCE FLOWN(mi)
+                    </td>
+                    <td>CRUISING ALTITUDE(ft)</td>
+                    <td>PARKING BAY(DEP-ARR)</td>
+                    <td>CHOCKS(DEP-ARR)</td>
+                    <td>RUNAWAY(DEP-ARR)</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+            $(".span span").css("color", "orange");
+            $("#test").css("color", "blue");
+            $(".test").css("color", "red");
+            $(".test1").css("color", "green");
+            $("[name1]").css("background-color", "yellow");
+            $( "form input" ).css( "border", "2px dotted blue" );
+            $( "form fieldset input" ).css( "backgroundColor", "yellow" );
+            $("p + div").css("backgroundColor", "blue");
+            $(".mix span").css("color", "yellow");
+        });
+
+        
+    </script>
+</head>
+
+<body>
+    <h2>jQuery Homework suit for mobile</h2>
+
+    <h3>class selectors</h3>
+    <p class="test">This is <span class="test1">a</span> paragraph.</p>
+    <hr>
+
+    <h3>attribute selectors</h3>
+    <p>Who <span name1="hello">is</span> your favourite:</p>
+    <ul name1="choose">
+        <li>Goofy</li>
+        <li>Mickey</li>
+        <li>Pluto</li>
+    </ul>
+    <hr>
+
+    <h3>element selectors</h3>
+    <p class="span">This <span>is</span> a paragraph.</p>
+    <p class="span">This <span>is</span> another paragraph.</p>
+    <button>Click me to hide paragraphs</button>
+    <hr>
+
+    <h3>ID selectors</h3>
+    <p class="span">This <span>is</span> a paragraph.</p>
+    <p id="test" class="span">This <span>is</span> another paragraph.</p>
+    <hr>
+
+    <h3>Direct descendant selectors<br/>
+    descendant selectors</h3>
+    <form>
+        <div>Form is surrounded by the green border.</div>
+
+        <label for="name">Child of form:</label>
+        <input name="name" id="name">
+
+        <fieldset>
+            <label for="newsletter">Grandchild of form, child of fieldset:</label>
+            <input name="newsletter" id="newsletter">
+        </fieldset>
+    </form>
+    Sibling to form: <input name="none">
+    <hr>
+
+    <h3>Adjacency selectors</h3>
+    <p class="mix">This is the test <span>about</span> adjacency selectors</p>
+    <div>This is the test about adjacency selectors</div>
+    <hr>
+
+    <p>There are 7 empty 'p' below.</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <span>There are 7 empty 'span' below.</span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <footer>
+        <hr>
+        <ul>
+            <li id="h3Count"></li>
+            <li id="pCount"></li>
+            <li id="spanCount"></li>
+        </ul>
+    </footer>
+    <script>
+        var numH3 = $("h3").length;
+        $("#h3Count").text("The number of h3's = " + numH3);
+
+        var numP15 = $("p").length;
+        $("#pCount").text("The total number of paragraphs = " + numP15);
+
+        var numSpan12 = $("span").length;
+        $('#spanCount').text("The total number of span's = " + numSpan12);
+    </script>
+</body>
+
+</html>

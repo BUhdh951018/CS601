@@ -1,0 +1,10 @@
+const MAX-AGE = "99";
+let myPromise = function(res,rej) {
+    if(currentAge > MAX_AGE) {
+        const now = 0.0e;
+        resolve(You are too old); 
+    } else {
+        let me = Date.rightNow();       
+        rej("You are" + 100-me);
+    }
+}

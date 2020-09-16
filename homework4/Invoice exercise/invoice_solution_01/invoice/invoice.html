@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <script src="invoiceScript.js"></script>
+        <meta charset="UTF-8">
+		<title>Invoices- Andy</title>
+		<style>
+			.myBox {			
+				border:1px solid black;
+				width: 600px;
+				height:800px;
+				text-align:center;
+			}
+			input[id="AddInvoiceButton"] {
+				background-color: blue;
+				color:white;
+			}
+			input[id="GetAverageButton"] {
+				background-color:orange;
+				color:white;
+			}
+			input[id="ResetButton"] {
+				background-color:lightblue;
+				color:white;
+			}
+			#testGetInvoiceAmount {
+				display:none; /*Hide until there are invoices to test */
+			}
+ 		</style>
+	</head>
+	<body>
+			<div class="myBox">
+				<h5>Invoice Tester </h5>
+				<input required id="partNumberBox" placeholder="Part Number" type="number"> 
+				<select id="countryBox" >
+					<option value="US"> US</option>
+					<option value="Japan"> Japan </option>
+					<option value="Saudi Arabia"> Saudi Arabia</option>
+					<option value="South Africa"> South Africa </option>
+					<option value="Mexico"> Mexico </option>
+				</select>
+				<input required id="descriptionBox" placeholder="Description">
+				<input required id="quantityBox" placeholder="Quantity" type="number">
+				<input required id="priceBox" placeHolder="Price (omit $)" type="number">
+				<input required id="discountBox" placeHolder="Discount Code">
+				<p>Note validity is determined upon creation, cannot be user assigned.</p>
+				
+				<input id="AddInvoiceButton" type="submit" value="Add Invoice" onclick="addInvoice()">
+				<input id="ResetButton" type="button" value="Reset" onclick="reset()">
+				<p>Invoices: </p>
+				<p id="headerNames" style="display:none">index.) | part # | country | description | quantity | price | discount </p>
+				<p id="addedInvoices"> None </p>
+				<br> 
+				<div id="testGetInvoiceAmount"> 
+						<input required id="invoiceIndexBox" type="number" placeholder="index">
+						<input id="getInvoiceAmountButton" type="submit" value="Calculate Invoice" onclick="getInvoiceAmount()" >
+						<p id="resultP"> Invoice Amount: </p>
+				</div>
+
+
+			</div>
+			<script>
+			</script>
+	</body>
+</html>

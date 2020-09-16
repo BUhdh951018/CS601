@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Jamaica</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // This example creates a 2-pixel-wide red polyline showing the path of
+        // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+        // Australia which was made by Charles Kingsford Smith.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {
+                    lat: 17,
+                    lng: -76
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [
+                {
+                    lat: 17.935556,
+                    lng: -76.7875
+                }, /*KIN*/
+                {
+                    lat: 21.773611,
+                    lng: -72.265833
+                }, /*PLS*/
+                {
+                    lat: 26.0725,
+                    lng: -80.152778
+                }, /*FLL*/
+                {
+                    lat: 43.676667,
+                    lng: -79.630556
+                }, /*YYZ*/
+                {
+                    lat: 40.639722,
+                    lng: -73.778889
+                }, /*JFK*/
+                {
+                    lat: 33.636667,
+                    lng: -84.428056
+                }, /*ATL*/
+                {
+                    lat: 28.429444,
+                    lng: -81.308889
+                }, /*MCO*/
+                {
+                    lat: 25.793333,
+                    lng: -80.290556
+                }, /*MIA*/
+                {
+                    lat: 25.038889,
+                    lng: -77.466111
+                }, /*NAS*/
+                {
+                    lat: 18.431944,
+                    lng: -69.671944
+                }, /*SDQ*/
+                {
+                    lat: 17.136667,
+                    lng: -61.793056
+                }, /*ANU*/
+                {
+                    lat: 18.040833,
+                    lng: -63.109444
+                }, /*SXM*/
+                {
+                    lat: 13.074722,
+                    lng: -59.4925
+                }, /*BGI*/
+                {
+                    lat: 9.071389,
+                    lng: -79.383611
+                }, /*PTY*/
+            ];
+            var currentPath = []
+            for (var i = 0; i < 13; i++) {
+                currentPath.push(flightPlanCoordinates[0]);
+                currentPath.push(flightPlanCoordinates[i + 1]);
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 1
+                });
+
+                flightPath.setMap(map);
+            }
+
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ecuador</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        var map;
+        var service;
+        var infowindow;
+        var firstCurrentPath = [];
+        var secondCurrentPath = [];
+
+
+        function initMap() {
+            //var sydney = new google.maps.LatLng(-33.867, 151.195);
+
+            infowindow = new google.maps.InfoWindow();
+
+            map = new google.maps.Map(
+                document.getElementById('map'), {
+                    center: {
+                        lat: 4,
+                        lng: -74
+                    },
+                    zoom: 4
+                });
+
+            var request = [{
+                    query: 'Mariscal Sucre International Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'ATL Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'FLL Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'MIA Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'MEX Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'BOG Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'Jorge Chávez International Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'Arturo Merino Benítez International Airport',
+                    fields: ['name', 'geometry'],
+                },
+            ];
+
+            var sRequest = [{
+                    query: 'José Joaquín de Olmedo International Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'Alfonso Bonilla Aragón International Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'BOS Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'LAX Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'SFO Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'PEK Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'PTY Airport',
+                    fields: ['name', 'geometry'],
+                },
+                {
+                    query: 'SJO Airport',
+                    fields: ['name', 'geometry'],
+                },
+            ];
+
+            service = new google.maps.places.PlacesService(map);
+
+            service.findPlaceFromQuery(request[0], function (results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    firstCurrentPath.push(results[0].geometry.location.toJSON());
+                    createMarker(results[0]);
+                    map.setCenter(results[0].geometry.location);
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+
+            for (var i = 0; i < 7; i++) {
+                //var nService = new google.maps.places.PlacesService(map);
+                service.findPlaceFromQuery(request[i + 1], function (results, status) {
+                    sleep(1000);
+                    if (status === "OVER_QUERY_LIMIT") {
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    } else {
+                        firstCurrentPath[1] = results[0].geometry.location.toJSON();
+                        createMarker(results[0]);
+                        var flightPath = new google.maps.Polyline({
+                            path: firstCurrentPath,
+                            geodesic: true,
+                            strokeColor: '#FF0000',
+                            strokeOpacity: 1,
+                            strokeWeight: 1
+                        });
+
+                        flightPath.setMap(map);
+                    }
+
+                });
+
+            }
+
+            service.findPlaceFromQuery(sRequest[0], function (results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    secondCurrentPath.push(results[0].geometry.location.toJSON());
+                    createMarker(results[0]);
+                    map.setCenter(results[0].geometry.location);
+                    sleep(1000);
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+
+            for (var j = 0; j < 7; j++) {
+                //var snService = new google.maps.places.PlacesService(map);
+                service.findPlaceFromQuery(sRequest[j + 1], function (results, status) {
+                    sleep(1000);
+                    if (status != google.maps.places.PlacesServiceStatus.OK) {
+                        console.log("1");
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    } else {
+                        console.log("2");
+                        secondCurrentPath[1] = results[0].geometry.location.toJSON();
+                        createMarker(results[0]);
+                        //console.log(secondCurrentPath);
+                        var flightPath = new google.maps.Polyline({
+                            path: secondCurrentPath,
+                            geodesic: true,
+                            strokeColor: '#FF0000',
+                            strokeOpacity: 1,
+                            strokeWeight: 1
+                        });
+
+                        flightPath.setMap(map);
+                    }
+                });
+            }
+        }
+
+        /*function createLine(path) {
+            var flightPath = new google.maps.Polyline({
+                path: path,
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 1,
+                strokeWeight: 1
+            });
+
+            flightPath.setMap(map);
+        }*/
+
+        function createMarker(place) {
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent(place.name);
+                infowindow.open(map, this);
+            });
+        }
+
+        function sleep(milliSeconds) {
+            var startTime = new Date().getTime();
+            while (new Date().getTime() < startTime + milliSeconds);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&libraries=places&callback=initMap&language=en"
+        async defer></script>
+</body>
+
+</html>

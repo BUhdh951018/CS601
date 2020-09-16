@@ -1,0 +1,22 @@
+ body{
+      background-color: white;
+      text-align: center; 
+      margin-top: 150px;
+ }
+
+ #timer{
+     font-family: "Optima";
+     font-size: 120px;
+     font-weight: 300;
+      
+ }
+ button{
+     width: 120px;
+     height: 40px;
+
+ }
+
+ button:hover{
+     cursor:pointer;
+ }
+ 

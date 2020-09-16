@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Puerto Rico</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // This example creates a 2-pixel-wide red polyline showing the path of
+        // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+        // Australia which was made by Charles Kingsford Smith.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 5,
+                center: {
+                    lat: 18,
+                    lng: -66
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [
+                {
+                    lat: 18.439167,
+                    lng: -66.001944
+                }, /*SJU*/
+                {
+                    lat: 41.978611,
+                    lng: -87.904722
+                }, /*ORD*/
+                {
+                    lat: 42.363056,
+                    lng: -71.006389
+                }, /*BOS*/
+                {
+                    lat: 40.639722,
+                    lng: -73.778889
+                }, /*JFK*/
+                {
+                    lat: 40.77725,
+                    lng: -73.872611
+                }, /*LGA*/
+                {
+                    lat: 40.6925,
+                    lng: -74.168611
+                }, /*EWR*/
+                {
+                    lat: 39.871944,
+                    lng: -75.241111
+                }, /*PHL*/
+                {
+                    lat: 39.175278,
+                    lng: -76.668333
+                }, /*BWI*/
+                {
+                    lat: 38.852222,
+                    lng: -77.037778
+                }, /*DCA*/
+                {
+                    lat: 38.944444,
+                    lng: -77.455833
+                }, /*IAD*/
+                {
+                    lat: 35.213889,
+                    lng: -80.943056
+                }, /*CLT*/
+                {
+                    lat: 33.636667,
+                    lng: -84.428056
+                }, /*ATL*/
+                {
+                    lat: 28.429444,
+                    lng: -81.308889
+                }, /*MCO*/
+                {
+                    lat: 27.975556,
+                    lng: -82.533333
+                }, /*TPA*/
+                {
+                    lat: 26.0725,
+                    lng: -80.152778
+                }, /*FLL*/
+                {
+                    lat: 25.793333,
+                    lng: -80.290556
+                }, /*MIA*/
+                {
+                    lat: 18.431944,
+                    lng: -69.671944
+                }, /*SDQ*/
+                {
+                    lat: 18.337222,
+                    lng: -64.973333
+                }, /*STT*/
+                {
+                    lat: 18.445556,
+                    lng: -64.543056
+                }, /*EIS*/
+                {
+                    lat: 18.040833,
+                    lng: -63.109444
+                }, /*SXM*/
+                {
+                    lat: 17.311389,
+                    lng: -62.718611
+                }, /*SKB*/
+                {
+                    lat: 17.205556,
+                    lng: -62.59
+                }, /*NEV*/
+                {
+                    lat: 15.546944,
+                    lng: -61.3
+                }, /*DOM*/
+                {
+                    lat: 17.136667,
+                    lng: -61.793056
+                }, /*ANU*/
+                {
+                    lat: 9.071389,
+                    lng: -79.383611
+                }, /*PTY*/
+                {
+                    lat: 4.701389,
+                    lng: -74.146944
+                }, /*BOG*/
+                {
+                    lat: 12.501389,
+                    lng: -70.015278
+                }, /*AUA*/
+                {
+                    lat: 21.036667,
+                    lng: -86.876944
+                }, /*CUN*/
+            ];
+            var currentPath = []
+            for (var i = 0; i < 27; i++) {
+                currentPath.push(flightPlanCoordinates[0]);
+                currentPath.push(flightPlanCoordinates[i + 1]);
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 1
+                });
+
+                flightPath.setMap(map);
+            }
+
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style>
+        body{
+            height:2000px;
+        }
+        /*nav_panel*/
+        #panel{
+            height:300px;
+            background-color:#212121;
+            display:none;
+            color: white
+        }
+        #panel>.row{
+            padding: 30px;
+        }
+        .panel_slide{
+            border-right: 1px solid #cfd8dc;
+            float: left;
+            height: 250px;
+        }
+        .nav_p{
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        /*underline*/
+        .underline{
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        .underline:before{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: all .3s;
+        }
+        .underline:hover:before{
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+        /*top*/
+        #top{
+            background: url(img/zhangjiajie/1.jpeg);
+            height:377px;
+        }
+        .top2{
+            background-color: rgba(0, 0, 0, 0.5);
+            color:white;
+            height:100px;
+            /*margin-top:99px;*/
+        }
+        .top2_title{
+            text-align:center;
+            margin-top:30px;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        .top2_select{
+            margin-left: 50px;
+        }
+        #content{
+            margin-left:300px;
+            height:2300px;
+            width:1000px;
+            margin-right:300px;
+        }
+        .content_title{
+            margin-top:50px;
+            font-family: 'Roboto Slab', serif;
+        }
+        .img{
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="index.html" style="margin-left:300px">Zhangjiajie</a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <form class="form-inline">
+                <div class="md-form my-0" style="margin-left:600px">
+                    <i class="fa fa-search" aria-hidden="true" style="color:white"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="flip" href="#">menu
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
+
+    <div id="panel">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="nav_p">JOURNEY</p>
+                <a href="https://www.google.com">
+                    <p class="underline">Hainan&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Changbai Mountains&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Zhangjiajie&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Hangzhou&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Wuzhen&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="">
+                    <p class="underline">Suzhou&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Nanjing&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Xi'an&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Chengdu&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">White Mountain&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">AIRLINE</p>
+                <a href="https://www.google.com">
+                    <p class="underline">Hainan Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Sichuan Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Delta Air Lines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">American Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">JetBlue&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a>
+                    <p class="underline">Alaska Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Cathay Pacific Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Alitalia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Iberia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">All Nippon Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">JOURNEY&FLIGHT LOG</p>
+                <a href="https://www.google.com">
+                    <p class="underline">Journey Log&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Flight Log&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="top" class="container-fluid">
+        <div class="row" style="height:280px;">
+
+        </div>
+        <div class="row top2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 top2_title">
+                        <h2>Zhangjiajie</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="content">
+        <div class="content_title">
+            <h1>Tianmen Mountain</h1>
+            <p>Tianmen Mountain is a mountain located within Tianmen Mountain National Park, Zhangjiajie, in the northwestern part
+                of Hunan Province, China.<br/>
+                A cablecar was constructed in 2005 by the French company Poma from nearby Zhangjiajie railway station to the top
+                of the mountain. Tianmen Mountain Cableway is claimed in tourist publications as the "longest passenger cableway of
+                high mountains in the world", with 98 cars and a total length of 7,455 m (24,459 ft) and ascent of 1,279 m (4,196
+                ft) The highest gradient is 37 degrees. Tourists can walk on kilometres of paths built onto the cliff face at the
+                top of the mountain, including sections with glass floors. An 11 km (7 mi) road with 99 bends also reaches the top
+                of the mountain and takes visitors to Tianmen cave, a natural hole in the mountain of a height of 131.5 m (431.4
+                ft).<br/>
+                A large temple is also located on the summit with chairlift or footpath access. The original temple here was built
+                in the Tang Dynasty. Today a more recent construction with Tang dynasty architecture occupies the site and includes
+                a vegetarian restaurant in the 10000 sq mi of setting.
+            </p>
+            <div class="img"><img src="img/zhangjiajie/2.jpg" alt="" weight="850" width="650"></div>
+        </div>
+        <div class="content_title">
+            <h1>Bailong Tianti</h1>
+            <p>The Bailong Tianti is magnificent, with a vertical height difference of 335 meters and a running height of 326
+                meters. It consists of a 154-meter mountain shaft and a 172-meter-high steel structure derrick. It uses three
+                double-layer full-exposure sightseeing and parallel operation. Currently enrolled in the Guinness World RecordsTM
+                with the “Highest Outdoor Elevator” honor, it is the perfect combination of natural beauty and artificial wonders.
+                The completion of Bailong Elevator realizes the goal of “upstream mountain, living under the mountain”, and pushes
+                the beautiful scenery of Yuanjiajie, Jinbianxi, Tianxia First Bridge and Ecstasy from behind the scenes to the
+                front desk, solving the traffic that has plagued the scenic spot for many years. Bottleneck problems, practice has
+                proved that the construction of Bailong ladder is very important.</p>
+            <div class="img"><img src="img/zhangjiajie/3.jpg" alt="" weight="850" width="650"></div>
+        </div>
+        <div class="content_title">
+            <h1>Wulingyuan</h1>
+            <p>Wulingyuan is a scenic and historical site in the Wulingyuan District of
+                south-central China's Hunan Province. It was inscribed as a UNESCO World Heritage Site in 1992. It is noted for
+                more than 3,000 quartzite sandstone pillars and peaks across most of the site, many over 200 metres (660 ft) in
+                height, along with many ravines and gorges with attractive streams, pools, lakes, rivers and waterfalls.[1] It
+                features 40 caves, many with large calcite deposits, and two natural bridges, Xianrenqiao (Bridge of the Immortals)
+                and Tianqiashengkong (Bridge Across the Sky).<br/>
+                The site is situated between 29°16′0″N 110°22′0″E and 29°24′0″N 110°41′0″E in Zhangjiajie City and lies about 270
+                kilometres (170 mi) to the northwest of Changsha, the capital of Hunan Province. The park covers an area of 690
+                square kilometers (266 square miles). Wulingyuan forms part of the Wuling Mountain Range. The scenic area
+                consists of four national parks, which are the Zhangjiajie National Forest Park, Suoxi Valley Nature Reserve,
+                Tianzi Mountain Nature Reserve and the recently added Yangjiajie Scenic Area. Overall there are over 560 attraction
+                sights to view.</p>
+            <div class="img"><img src="img/zhangjiajie/4.jpg" alt="" weight="850" width="650"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

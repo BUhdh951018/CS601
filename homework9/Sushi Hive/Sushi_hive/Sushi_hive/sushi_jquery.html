@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sushi Hive</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style>
+  	
+  	h2 {
+
+  		text-align: center;
+
+  	}
+
+    #cart {
+    	height: 50px;
+    	width: 50px;
+    }
+
+    #orders {
+    	color: red;
+    }
+
+    button {
+		padding: 5px;
+		font-size: 14px;
+		background: red;
+		border-radius: 10px;
+		color: whitesmoke;
+	}
+
+  </style>
+</head>
+<body>
+
+<h2>Sushi Delivery</h2>
+<h2>Click on the image of the sushi you want to order</h2>
+
+<img src="grocery_cart.jpg" id="cart">
+<span id="orders">0</span><br>
+<a href="payment.html"><button>Proceed to payment</button></a>
+
+<ol id="ul"></ol>
+
+ 
+<script>
+var q=0;
+var xml = "<rss version='2.0'><sushi><type>Maki</type><img>sushi_01.png</img></sushi><sushi><type>Temaki</type><img>sushi_02.png</img></sushi><sushi><type>Uramaki</type><img>sushi_03.png</img></sushi><sushi><type>Tuna nigiri</type><img>sushi_04.png</img></sushi><sushi><type>Unagi</type><img>sushi_05.png</img></sushi><sushi><type>Hamachi Nigiri</type><img>sushi_06.png</img></sushi><sushi><type>Sashimi</type><img>sushi_07.png</img></sushi><sushi><type>Ika</type><img>sushi_08.png</img></sushi><sushi><type>Ikura</type><img>sushi_09.png</img></sushi></rss>",
+  xmlDoc = $.parseXML( xml ),
+  $xml = $( xmlDoc );
+
+  display();
+
+function display() {
+	var i=0;
+for(i=0;i<9;i++) {
+$title = $xml.find("type")[i].childNodes[0].nodeValue;
+$image = $xml.find("img")[i].childNodes[0].nodeValue;
+
+$("#ul").append("<li>"+$title+"</li>");
+
+$("<img>").attr("src", $image).appendTo("#ul");
+
+}
+
+$("[src]").click(function() {
+	q++;
+	console.log(q);
+	$("#orders").text(q);
+});
+
+}
+
+
+</script>
+ 
+</body>
+</html>

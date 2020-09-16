@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 12</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" id="test"/>
+
+<script>
+    $("#test").click( event => {
+        console.log("clicked");
+    });
+
+    $("#test").change( event => {
+        console.log("value changed");
+    });
+
+    $("#test").focusout( event => {
+        console.log("focus lost");
+    });
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Colombia</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // This example creates a 2-pixel-wide red polyline showing the path of
+        // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+        // Australia which was made by Charles Kingsford Smith.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 3.5,
+                center: {
+                    lat: 4,
+                    lng: -74
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [{
+                    lat: 4.701389,
+                    lng: -74.146944,
+                    code: 'El Dorado International Airport'
+                }, /*BOG*/
+                {
+                    lat: 6.167222,
+                    lng: -75.426667,
+                    code: 'José María Córdova International Airport'
+                }, /*MDE*/
+                {
+                    lat: 40.639722,
+                    lng: -73.778889,
+                    code: 'John F. Kennedy International Airport'
+                }, /*JFK*/
+                {
+                    lat: 28.429444,
+                    lng: -81.308889,
+                    code: 'Orlando International Airport'
+                }, /*MCO*/
+                {
+                    lat: 25.793333,
+                    lng: -80.290556,
+                    code: 'Miami International Airport'
+                }, /*MIA*/
+                {
+                    lat: 26.0725,
+                    lng: -80.152778,
+                    code: 'Fort Lauderdale–Hollywood International Airport'
+                }, /*FLL*/
+                {
+                    lat: 19.436111,
+                    lng: -99.071944,
+                    code: 'Mexico City International Airport'
+                }, /*MEX*/
+                {
+                    lat: 21.036667,
+                    lng: -86.876944,
+                    code: 'Cancún International Airport'
+                }, /*CUN*/
+                {
+                    lat: -12.021944,
+                    lng: -77.114444,
+                    code: 'Jorge Chávez International Airport'
+                }, /*LIM*/
+                {
+                    lat: 43.676667,
+                    lng: -79.630556,
+                    code: 'Toronto Pearson International Airport'
+                }, /*YYZ*/
+                {
+                    lat: 40.6925,
+                    lng: -74.168611,
+                    code: 'Newark Liberty International Airport'
+                }, /*EWR*/
+                {
+                    lat: 38.944444,
+                    lng: -77.455833,
+                    code: 'Washington Dulles International Airport'
+                }, /*IAD*/
+                {
+                    lat: 33.636667,
+                    lng: -84.428056,
+                    code: 'Hartsfield–Jackson Atlanta International Airport'
+                }, /*ATL*/
+                {
+                    lat: -0.113333,
+                    lng: -78.358611,
+                    code: 'Mariscal Sucre International Airport'
+                }, /*UIO*/
+                {
+                    lat: -2.1575,
+                    lng: -79.883611,
+                    code: 'José Joaquín de Olmedo International Airport'
+                }, /*GYE*/
+                {
+                    lat: -13.535556,
+                    lng: -71.943611,
+                    code: 'Alejandro Velasco Astete International Airport'
+                }, /*CUZ*/
+                {
+                    lat: -16.513333,
+                    lng: -68.192222,
+                    code: 'El Alto International Airport'
+                }, /*LPB*/
+                {
+                    lat: -17.644722,
+                    lng: -63.135278,
+                    code: 'Viru Viru International Airport'
+                }, /*VVI*/
+                {
+                    lat: -33.392778,
+                    lng: -70.785556,
+                    code: 'Arturo Merino Benítez International Airport'
+                }, /*SCL*/
+            ];
+
+            var infowindow = new google.maps.InfoWindow();
+
+            for (var i = 1; i < 18; i++) {
+                var currentPath = [];
+                currentPath.push(flightPlanCoordinates[0]);
+                currentPath.push(flightPlanCoordinates[i + 1]);
+                var temp = flightPlanCoordinates[i + 1].code;
+
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 0.5
+                });
+                var marker = new google.maps.Marker({
+                    position: flightPlanCoordinates[i + 1],
+                    map: map,
+                    title: flightPlanCoordinates[i + 1].code
+                });
+                addContent(marker, temp, infowindow);
+
+                flightPath.setMap(map);
+            }
+
+            for (var j= 0; j < 7; j++) {
+                var currentPath = []; 
+                currentPath.push(flightPlanCoordinates[1]);
+                currentPath.push(flightPlanCoordinates[j + 2]);
+                var temp = flightPlanCoordinates[j + 2].code;
+                var flightPath = new google.maps.Polyline({
+                        path: currentPath,
+                        geodesic: true,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 1,
+                        strokeWeight: 0.5
+                    });
+                var marker = new google.maps.Marker({
+                    position: flightPlanCoordinates[j + 2],
+                    map: map,
+                    title: flightPlanCoordinates[j + 2].code
+                });
+                addContent(marker, temp, infowindow);
+                flightPath.setMap(map);
+            }
+        }
+
+        function addContent(marker, temp, infowindow) {
+            var contentString = '<div>' + temp + '</div>';
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent(contentString);
+                infowindow.open(map, marker);
+            })
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap&language=en">
+    </script>
+</body>
+
+</html>

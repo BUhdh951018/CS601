@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    $(function () {
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts/1',
+                type: 'get',
+                dataType: 'json',
+                success: function (datas) {
+                    var tbhtml = "<tr><th>name</th><th>value</th></tr>";
+                    for (var i = 0; i < datas.length; i++) {
+                        tbhtml += "<tr><td>" + datas[i].name + "</td><td>" + datas[i].age +
+                            "</td><td>" + datas[i].sex + "</td></tr>";
+                    }
+
+                    $('table:eq(0)').html(tbhtml);
+                }
+            })
+        })
+</script>
+<center>
+
+    <table border="1px solid">
+        <tr>
+            <th>name</th>
+            <th>value</th>
+        </tr>
+        <tr>
+            <td>userId</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
+        </tr>
+        <tr>
+            <td>body</td>
+<td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas
+    totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
+        </tr>
+    </table>
+</center>
+
+</body>
+</html>

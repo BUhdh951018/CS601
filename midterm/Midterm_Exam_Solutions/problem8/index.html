@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 8</title>
+    <style>
+        .button{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            background: #d8d8d8;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
+        }
+        .outer{
+            text-align: center;
+            height: 45px;
+            width: 190px;
+            border-radius: 8px;
+            background: #dddddd;
+            margin-top: 3px;
+            margin: auto;
+            box-shadow: 1px 1px 1px 1px #555459;
+        }
+        .inner{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 13px;
+        }
+        .txt{
+            font-size: 16px;
+            font-weight: bold;
+            color: #555459;
+        }
+        .star-five {
+            margin: 5px 0;
+            position: relative;
+            display: block;
+            color: #888888;
+            width: 0px;
+            height: 0px;
+            border-right: 10px solid transparent;
+            border-bottom: 7px solid #888888;
+            border-left: 10px solid transparent;
+            transform: rotate(35deg);
+        }
+        .star-five:before {
+            border-bottom: 8px solid #888888;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -4.5px;
+            left: -6.5px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+        .star-five:after {
+            position: absolute;
+            display: block;
+            color: #888888;
+            top: 0.3px;
+            left: -10.5px;
+            width: 0px;
+            height: 0px;
+            border-right: 10px solid transparent;
+            border-bottom: 7px solid #888888;
+            border-left: 10px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+    </style>
+</head>
+<body>
+
+<div class="button">
+    <div class="outer">
+        <div class="inner">
+            <div class="star-five"></div>
+            <div class="txt">CHECKOUT</div>
+            <div class="star-five"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

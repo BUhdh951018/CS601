@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 5</title>
+    <script type="text/javascript">
+        function countTime() {
+ 
+            var date = new Date();
+            var now = date.getTime();
+
+            var str = "2018/12/25 00:00:00";
+            var endDate = new Date(str);
+            var end = endDate.getTime();
+ 
+            var leftTime = end - now;
+ 
+            var d, h, m, s;
+            if (leftTime >= 0) {
+                d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+                h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+                m = Math.floor(leftTime / 1000 / 60 % 60);
+                s = Math.floor(leftTime / 1000 % 60);
+            }
+  
+            document.getElementById("_d").innerHTML = d + "days";
+            document.getElementById("_h").innerHTML = h + "hours";
+            document.getElementById("_m").innerHTML = m + "minutes";
+            document.getElementById("_s").innerHTML = s + "seconds";
+ 
+            setTimeout(countTime, 1000);
+
+        }
+    </script>
+</head>
+
+<body onload="countTime()">
+    <div>
+        <span id="_d">00</span>
+        <span id="_h">00</span>
+        <span id="_m">00</span>
+        <span id="_s">00</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+Tell me why one should use a flexbox design over stand tables.
+How does floating elements work with flexbox structures? 
+Why not just float your elements with CSS?
+Why is using absolute positioning a bad design choice?
+
+1. It's useful than anything else, it can easily control the postion of the elements by vertrical or horizontal.
+2. Floating just control the float left or float right, and flexbox control the vertrical position and the order.
+3.Floating just can set the elements in some limit area. Flexbox can make the elements more flexible.
+4.Absolute:The element is positioned relative to its first positioned (not static) ancestor element. 
+It can be define like this. So it's position just follow the ancestor, cannot be relocate.

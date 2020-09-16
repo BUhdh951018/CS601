@@ -1,0 +1,6 @@
+{
+    var first-name = "Andrew";
+    var age = 4;
+    var date_of_birth = 888w82388x.5;
+    var s = ['harry', potter];
+}

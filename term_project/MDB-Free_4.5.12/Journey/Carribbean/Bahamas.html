@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="transTable">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahamas</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="../../js/angular16.js"></script>
+    <script src="table.js"></script>
+    <style>
+        body {
+            height: 1000px;
+        }
+        a{
+            color: white;
+        }
+
+        /*nav_panel*/
+        #panel {
+            height: 300px;
+            background-color: #212121;
+            display: none;
+            color: white
+        }
+
+        #panel>.row {
+            padding: 30px;
+        }
+
+        .panel_slide {
+            border-right: 1px solid #cfd8dc;
+            float: left;
+            height: 250px;
+        }
+
+        .nav_p {
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        /*underline*/
+        .underline {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .underline:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: all .3s;
+        }
+
+        .underline:hover:before {
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        /*top*/
+        #top {
+            background: url(../../img/Carribbean/Bahamas.jpg);
+            height: 377px;
+        }
+
+        .top2 {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            height: 100px;
+            /*margin-top:99px;*/
+        }
+
+        .top2_title {
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .top2_select {
+            margin-left: 50px;
+        }
+
+        #content {
+            margin-left: 300px;
+            height: 2000px;
+            width: 1000px;
+            margin-right: 300px;
+        }
+
+        .content_title {
+            margin-top: 50px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .img {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body ng-controller="TableController">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="../Carribbean.html" style="margin-left:300px">Bahamas</a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <form class="form-inline">
+                <div class="md-form my-0" style="margin-left:600px">
+                    <i class="fa fa-search" aria-hidden="true" style="color:white"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="flip" href="#">menu
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
+
+    <div id="panel">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="nav_p">CITY</p>
+                <a href="Carribbean/Bahamas.html">
+                    <p class="underline">Bahamas&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/bahamas.html"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+                <a href="">
+                    <p class="underline">Turks and Caicos Islands&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <a href="Trans/Turks and Caicos Islands.html.html"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+                <a href="">
+                    <p class="underline">Haiti&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    &nbsp;&nbsp;<a href="Trans/"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+                <a href="">
+                    <p class="underline">Jamaica&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    &nbsp;&nbsp;<a href="Trans/Jamaica.html"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+                <a href="">
+                    <p class="underline">Dominican Republic&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    &nbsp;&nbsp;<a href="Trans/Dominican Republic.html"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="">
+                    <p class="underline">Puerto Rico&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Puerto Rico.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">US Virgin Islands&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/US Virgin.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">British Virgin Islands&nbsp;<i class="fa fa-angle-right"
+                            aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/UK Virgin.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Sint Maarten&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Sint Maarten.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Saint Kitts and Nevis&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Saint Kitts and Nevis.html"><i
+                                class="fa fa-plane"></i></a></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="">
+                    <p class="underline">Antigua and Barbuda&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Antigua and Barbuda.html"><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+                <a href="">
+                    <p class="underline">Montserrat&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Montserrat.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Dominica&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Dominica.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Barbados&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Barbados.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Grenada&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Grenada.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">AIRLINE</p>
+                <a href="https://www.bahamasair.com/">
+                    <p class="underline">Bahamasair&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="http://www.intercaribbean.com/">
+                    <p class="underline">InterCaribbean Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.caribbean-airlines.com/#/">
+                    <p class="underline">Carribbean Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.liat.com/">
+                    <p class="underline">LIAT&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.fly-winair.sx/">
+                    <p class="underline">Winair&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="https://sunriseairways.net/fr/">
+                    <p class="underline">Sunrise Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.seaborneairlines.com/">
+                    <p class="underline">Seaborne&Silver Airways&nbsp;<i class="fa fa-angle-right"
+                            aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.aircentury.com/en/">
+                    <p class="underline">Air Century&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="http://viairlink.com/">
+                    <p class="underline">VI Airlink&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.flymontserrat.com/">
+                    <p class="underline">FlyMontserrat&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="top" class="container-fluid">
+        <div class="row" style="height:280px;">
+
+        </div>
+        <div class="row top2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 top2_title">
+                        <h2>Bahamas</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="content_title col-sm-12">
+                <h1>Domestic Transportations</h1>
+                <ul>
+                    <a href="https://www.westernairbahamas.com/">
+                        <li style="color: #212121">Western air</li>
+                    </a>
+                    <a href="https://www.skybahamas.net/">
+                        <li style="color: #212121">Sky Bahamas</li>
+                    </a>
+                    <a href="https://www.southernaircharter.com/">
+                        <li style="color: #212121">Southern Air Charter</li>
+                    </a>
+                    <a href="https://pineappleair.com/">
+                        <li style="color: #212121">Pineapple Air</li>
+                    </a>
+                </ul>
+            </div>
+            <table class="table table-bordered" id="table">
+                <thead>
+                    <tr>
+                        <th width="150px">Traveling Option</th>
+                        <th>Traveling number</th>
+                        <th>Departure</th>
+                        <th>Arrive</th>
+                        <th>Aireline</th>
+                        <th>Aircraft</th>
+                        <th>Price</th>
+                        <th width="150px">Show on the map</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="path in paths">
+                        <td ng-if="!$index" rowspan="{{paths.length}}" style="vertical-align:middle">
+                            {{path.name}}</td>
+                        <td>{{$index + 1}}</td>
+                        <td>{{path.departure}}</td>
+                        <td>{{path.arrive}}</td>
+                        <td>{{path.airline}}</td>
+                        <td>{{path.aircraft}}</td>
+                        <td>{{path.price}}</td>
+                        <td style="vertical-align:middle">
+                            <button type="button" class="btn btn-primary" style="margin:0;margin-left:10px;"
+                                onclick="addLine(this)">show</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="content_title col-md-12">
+                <a href="Trans/bahamas.html">
+                    <h1 style="color: #212121">International Transportations</h1>
+                </a>
+            </div>
+            <div class="content_title col-md-8">
+                <h1>Trans Table</h1>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th style="width:250px">City</th>
+                            <th style="width:40px">Code</th>
+                            <th style="width:40px">Airline</th>
+                            <th style="width:140px">Aircraft Type</th>
+                            <th style="width:40px">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="flight in flights">
+                        <tr>
+                            <td><input type="text" ng-model="flight.city" style="width:250px"></td>
+                            <td><input type="text" ng-model="flight.code" style="width:40px"></td>
+                            <td><input type="text" ng-model="flight.airline" style="width:40px"></td>
+                            <td><input type="text" ng-model="flight.aircraftType" style="width:140px"></td>
+                            <td><input type="text" ng-model="flight.price" style="width:40px"></td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3"></th>
+                            <th ng-click="addFlight()"><button>New</button></th>
+                            <th ng-click="saveFlight()"><button>Save</button></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../js/mdb.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

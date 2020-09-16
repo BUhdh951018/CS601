@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+            var month = document.getElementById("month").value;
+            var day = document.getElementById("day").value;
+            var year = document.getElementById("year").value;
+
+            var date = new Date();
+            var c_month = date.getMonth();
+            var c_day =  date.getDate();
+            var c_year =  date.getFullYear();
+
+            var r_year = c_year - year;
+            var r_month =  c_month - month;
+            var r_day =  c_day - day;
+
+            document.getElementById("demo1").innerHTML = r_year;
+            document.getElementById("demo2").innerHTML = r_month;
+            document.getElementById("demo3").innerHTML = r_day;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+<div class="birthday">
+    <input type="number" name="monthCheck" id="month" min="1" max="12" placeholder="MM" />
+    <input type="number" name="dayCheck" id="day" min="1" max="31" placeholder="DD" />
+    <input type="number" name="yearCheck" id="year" min="1890" max="2018" placeholder="YYYY" />
+</div>
+<input type="button" onclick="myFunction()" value="获取"> 
+    </form>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+</body>
+</html>

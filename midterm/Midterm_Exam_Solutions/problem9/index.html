@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 9</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<form onsubmit="return false;">
+    <textarea id="input" type="number" cols="30" rows="10"></textarea>
+    <button type="submit" id="submit">Run Test</button>
+</form>
+<script>
+    $("#input").on("change", (event) => {
+        const iVal = window.parseInt( event.target.value );
+
+        if ( iVal > 5 && iVal < 9 ) {
+            $("#submit").removeAttr("disabled");
+        } else {
+            $("#submit").attr("disabled", "disabled");
+        }
+    });
+</script>
+</body>
+</html>

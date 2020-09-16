@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Bahamas</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // This example creates a 2-pixel-wide red polyline showing the path of
+        // the first trans-Pacific flight between Oakland, CA, and Brisbane,
+        // Australia which was made by Charles Kingsford Smith.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {
+                    lat: 25,
+                    lng: -77
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [{
+                    lat: 25.038889,
+                    lng: -77.466111,
+                    code: 'Nassu, Panama'
+                }, /*NAS*/
+                {
+                    lat: 26.0725,
+                    lng: -80.152778,
+                    code: 'Broward County, FL'
+                }, /*FLL*/
+                {
+                    lat: 41.978611,
+                    lng: -87.904722,
+                    code: 'Chicago, IL'
+                }, /*ORD*/
+                {
+                    lat: 43.676667,
+                    lng: -79.630556,
+                    code: 'Toronto, Canada'
+                }, /*YYZ*/
+                {
+                    lat: 40.639722,
+                    lng: -73.778889,
+                    code: 'New York, NY'
+                }, /*JFK*/
+                {
+                    lat: 40.77725,
+                    lng: -73.872611,
+                    code: 'New York, NY'
+                }, /*LGA*/
+                {
+                    lat: 40.6925,
+                    lng: -74.168611,
+                    code: 'Newark, NJ'
+                }, /*EWR*/
+                {
+                    lat: 39.871944,
+                    lng: -75.241111,
+                    code: 'Philadelphia, PA'
+                }, /*PHL*/
+                {
+                    lat: 39.175278,
+                    lng: -76.668333,
+                    code: 'Baltimore, MD'
+                }, /*BWI*/
+                {
+                    lat: 38.852222,
+                    lng: -77.037778,
+                    code: 'Washington, DC'
+                }, /*DCA*/
+                {
+                    lat: 35.213889,
+                    lng: -80.943056,
+                    code: 'Charlotte, NC'
+                }, /*CLT*/
+                {
+                    lat: 33.636667,
+                    lng: -84.428056,
+                    code: 'Atlanta, GA'
+                }, /*ATL*/
+                {
+                    lat: 28.429444,
+                    lng: -81.308889,
+                    code: 'Orlando, FL'
+                }, /*MCO*/
+                {
+                    lat: 27.975556,
+                    lng: -82.533333,
+                    code: 'Tampa, FL'
+                }, /*TPA*/
+                {
+                    lat: 25.793333,
+                    lng: -80.290556,
+                    code: 'Miami, FL'
+                }, /*MIA*/
+                {
+                    lat: 21.773611,
+                    lng: -72.265833,
+                    code: 'Procidenciales, Turks and Caicos Islands'
+                }, /*PLS*/
+                {
+                    lat: 17.935556,
+                    lng: -76.7875,
+                    code: 'Kingston, Jamaica'
+                }, /*KIN*/
+                {
+                    lat: 19.733056,
+                    lng: -72.194722,
+                    code: 'Cap-Haitien, Haiti'
+                }, /*CAP*/
+                {
+                    lat: 18.58,
+                    lng: -72.2925,
+                    code: 'Port-au-Prince, Haiti'
+                }, /*PAP*/
+                {
+                    lat: 9.071389,
+                    lng: -79.383611,
+                    code: 'Panama City, Panama'
+                }, /*PTY*/
+            ];
+
+            var infowindow = new google.maps.InfoWindow();
+            
+            for (var i = 0; i < 19; i++) {
+                var currentPath = [];
+                currentPath.push(flightPlanCoordinates[0]);
+                currentPath.push(flightPlanCoordinates[i + 1]);
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 1
+                });
+                
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: flightPlanCoordinates[i+1],
+                    title:  flightPlanCoordinates[i+1].code
+                });
+
+                var contentString = flightPlanCoordinates[i+1].code;
+                addContent(map, marker, contentString, infowindow);
+
+                flightPath.setMap(map);
+            }
+        }
+
+        function addContent(map, marker, content, infowindow) {
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(content);
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap">
+    </script>
+</body>
+
+</html>

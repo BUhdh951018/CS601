@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Question 5</title>
+
+</head>
+<body>
+    <select>
+        <option id="jan" value="1">1</option>
+        <option id="feb" value="2">2</option>
+        <option id="mar" value="3">3</option>
+        <option id="apr" value="4">4</option>
+        <option id="may" value="5">5</option>
+        <option id="jun" value="6">6</option>
+        <option id="jul" value="7">7</option>
+        <option id="aug" value="8">8</option>
+        <option id="sep" value="9">9</option>
+        <option id="oct" value="10">10</option>
+        <option id="nov" value="11">11</option>
+        <option id="dec" value="12">12</option>
+    </select>
+    <div id="show"></div>
+    <script>
+        $(document).ready(function() {
+            var months = ["January", "February", "March",
+            "April", "May", "June", "July", "August", "September",
+            "October", "November", "December"];
+            $("select").on('change',function(){
+                var i = this.value;
+                document.getElementById("show").innerHTML = months[i-1];
+            });
+        });
+    </script>
+</body>
+</html>

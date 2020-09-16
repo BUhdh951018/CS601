@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Part B</title>
+    <style>
+        p{
+            font-size:20px;
+        }
+        #test{
+            color: blue;
+        }
+        .foo{
+            margin-top:200px;
+        }
+        [title='hit']{
+            font-weight: 1000;
+        }
+        p,div{
+            margin-left:300px;
+        }
+        section > span{
+            border-style:solid;
+        }
+        p+div#test+section.foo span[title='hit'] {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <div id="test"> This is a div#test</div>
+    <section class="foo">
+        <span title="hit">This is the target of the solution</span>
+    </section>
+</body>
+</html>

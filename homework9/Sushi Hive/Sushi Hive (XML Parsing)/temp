@@ -1,0 +1,50 @@
+<script>
+                /*    
+                fetch("sushiData.xml")
+                .then(result => {console.log("hello"); return result.text();})
+                .then(xml =>{
+                    const domParser = new DOMParser();
+                    const xmlDocument =domParser.parseFromString(xml,"text/xml");
+                    console.log(xmlDocument);
+                    const xmlDocument =domParser.parseFromString(text,"text/xml");
+                    console.log(xmlDocument);
+                });
+        */
+                /*
+                ,{
+                    "mode": "no-cors",
+                    "permissions": [    
+                                        "*",
+                                        "https://www.google.com/",
+                                        "https://*.google.com/",
+                                        "https://*/
+                                   /*     "
+                                    ]
+              //  }
+              //  */
+          
+                /*var xhttp;
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        myFunction(this);
+                    }
+                };
+                xhttp.open("GET", chrome.extension.getFile('sushiData.xml'), true);
+                // /xhttp.open("GET", "sushiData.xml", true);
+                xhttp.send();
+                
+                function myFunction(xml) {
+                    var x, i, txt, xmlDoc; 
+                    xmlDoc = xml.responseXML;
+                    console.log(xmlDoc);
+                    txt = "";
+                    x = xmlDoc.getElementsByTagName("sushi");
+                    for (i = 0; i < x.length; i++) { 
+                        txt += x[i].childNodes[0].nodeValue + "<br>";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                }
+        */
+        
+                </script>

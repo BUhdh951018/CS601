@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Problem 4</title>
+    <style>
+        div{
+            background-color: red;
+            height:200px;
+            width:200px;
+        }
+        .white{
+            background-color: white;
+        }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $("div").click(function(){
+            $(this).toggleClass("white")
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="test">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <style>
+        body{
+            height:2000px;
+        }
+        /*nav_panel*/
+        #panel{
+            height:300px;
+            background-color:#212121;
+            display:none;
+            color: white
+        }
+        #panel>.row{
+            padding: 30px;
+        }
+        .panel_slide{
+            border-right: 1px solid #cfd8dc;
+            float: left;
+            height: 250px;
+        }
+        .nav_p{
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        /*underline*/
+        .underline{
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        .underline:before{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: all .3s;
+        }
+        .underline:hover:before{
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+        /*top*/
+        #top{
+            background: url(img/index4.jpeg);
+            height:477px;
+        }
+        .top1{
+            background-color:rgba(0, 0, 0, 0.5);
+            color:white;
+            height:180px;
+            width:400px;
+            margin-top:100px;
+            padding:20px;
+        }
+        .top1>h2{
+            font-family:Microsoft Yahei;
+        }
+        .top1>a{
+            background-color: #4b5e26;
+            border: 1px solid #fff;
+            font-size:15px;
+        }
+        .top2{
+            background-color: rgba(0, 0, 0, 0.5);
+            color:white;
+            height:99px;
+            margin-top:99px;
+        }
+        .top2_title{
+            text-align:center;
+            margin-top:10px;
+        }
+        .top2_select{
+            margin-left: 50px;
+        }
+        .top2_select_button{
+            background-color:#fff;
+            color:black;
+            width:635px;
+            padding:7px 17px;
+            height:30px;
+        }
+        .top2_select_ul{
+            width:635px;
+            padding:10px;
+        }
+        .select{
+            color:black;
+        }
+        /*line picture*/
+        #line_h3:hover{
+            color:green;
+        }
+        #line{
+            padding-top:50px;
+            width:1000px;
+        }
+        #line_h3{
+            padding-top:20px;
+            font-family: 'Bitter', serif;
+        }
+        #line_p{
+            font-size:15px;
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+        #line1_img{
+            width:470px;
+        }
+        #line2_img{
+            height:202px;
+            width:303px;
+        }
+        .line_a{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="index.html" style="margin-left:300px">Navbar</a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <form class="form-inline">
+                <div class="md-form my-0" style="margin-left:600px">
+                    <i class="fa fa-search" aria-hidden="true" style="color:white"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="flip" href="#">menu
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
+
+    <div id="panel">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="nav_p">JOURNEY</p>
+                <a href="Journey/hainan.html">
+                    <p class="underline">Hainan&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="Journey/changbai.html">
+                    <p class="underline">Changbai Mountains&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="Journey/zhangjiajie.html">
+                    <p class="underline">Zhangjiajie&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Hangzhou&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Wuzhen&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="Journey/Carribbean.html">
+                    <p class="underline">Carribbean&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="Journey/SouthAmerican.html">
+                    <p class="underline">South American&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Xi'an&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">Chengdu&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">White Mountain&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">AIRLINE</p>
+                <a href="Airline/hainan_air.html">
+                    <p class="underline">Hainan Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Sichuan Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="Airline/delta.html">
+                    <p class="underline">Delta Air Lines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">American Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">JetBlue&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a>
+                    <p class="underline">Alaska Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="Airline/cathay.html">
+                    <p class="underline">Cathay Pacific Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Alitalia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">Iberia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a>
+                    <p class="underline">All Nippon Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">JOURNEY&FLIGHT LOG</p>
+                <a href="Log/journey_log.html">
+                    <p class="underline">Journey Log&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="Log/flight_log.html">
+                    <p class="underline">Flight Log&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="top" class="container-fluid">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-4">
+                <div class="top1">
+                    <br>
+                    <h2>PLAN YOUR JOURNEY</h2>
+                    <a href="Log/flight_log.html" class="btn">Begin
+                        Your Journey</a>
+                </div>
+            </div>
+        </div>
+        <div class="row top2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 top2_title">
+                        <p>FIND A JOURNEY</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-7 top2_select">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle top2_select_button" data-toggle="dropdown">
+                                Choose Journey 
+                            </button>
+                            <ul class="dropdown-menu top2_select_ul" role="menu">
+                                <li><a href="Journey/hainan.html" class="select">Hainan</a></li>
+                                <li><a href="Journey/changbai.html" class="select">Changbai Mountain</a></li>
+                                <li><a href="Journey/zhangjiajie.html" class="select">Zhangjiajie</a></li>
+                                <li><a href="#" class="select">Hangzhou</a></li>
+                                <li><a href="" class="select">Wuzhen</a></li>
+                                <li><a href="" class="select">Suzhou</a></li>
+                                <li><a href="" class="select">Nanjing</a></li>
+                                <li><a href="" class="select">Xi'an</a></li>
+                                <li><a href="" class="select">Chengdu</a></li>
+                                <li><a href="" class="select">White Mountain</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="line" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div><img src="img/journey/hainan.png" id="line1_img" alt=""></div>
+                <a href="Journey/hainan.html" class="line_a">
+                    <div id="line_h3">
+                        <h3>Hainan&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                    </div>
+                </a>
+                <div>
+                    <p id="line_p">Hainan is an island province of China and the nation’s southernmost point. It's known for its tropical climate, beach
+                    resorts and forested, mountainous interior. The southern city of Sanya has many beaches that range from 22km-long Sanya Bay to crescent Yalong Bay and its luxury
+                    hotels.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div><img src="img/journey/changbai.jpg" id="line1_img" alt=""></div>
+                <a href="Journey/changbai.html" class="line_a">
+                    <div id="line_h3">
+                    <h3>Changbai Mountain&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                    </div>
+                </a>
+                <div>
+                    <p id="line_p">The Changbai Mountains are a major mountain range in Northeast Asia. The mountains extend from the Northeast Chinese
+                    provinces of Heilongjiang, Jilin and Liaoning, across the border between China and North Korea, to the North Korean
+                    provinces of Ryanggang and Chagang.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div><img src="img/journey/zhangjiajie.jpg" id="line2_img" alt=""></div>
+                <a href="Journey/zhangjiajie.html" class="line_a">
+                    <div id="line_h3">
+                        <h3>Zhangjiajie&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                    </div>
+                </a>
+                <div>
+                    <p id="line_p">Zhangjiajie, a city in the northwest of China's Hunan province, is home to the famed Wulingyuan Scenic Area.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div><img src="img/journey/hangzhou.jpg" id="line2_img" alt=""></div>
+                <div id="line_h3">
+                    <h3>Hangzhou&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                </div>
+                <div>
+                    <p id="line_p">Hangzhou is the southern terminus of the ancient Grand Canal waterway, which
+                    originates in Beijing.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div><img src="img/journey/wuzhen.jpg" id="line2_img" alt=""></div>
+                <div id="line_h3">
+                    <h3>Wuzhen&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                </div>
+                <div>
+                    <p id="line_p">Wuzhen is a historic scenic town, part of Tongxiang, located in northern Zhejiang Province, China. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div><img src="img/airline/delta.jpg" id="line2_img" alt=""></div>
+                <a href="Airline/delta.html" class="line_a">
+                    <div id="line_h3">
+                        <h3>Delta Air Lines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                    </div>
+                </a>
+                <div>
+                    <p id="line_p">Delta Air Lines, Inc. is a major United States airline, with its headquarters and
+                    largest hub at Hartsfield–Jackson Atlanta International Airport in Atlanta, Georgia.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div><img src="img/airline/cathay-pacificjpg.jpg" id="line2_img" alt=""></div>
+                <a href="Airline/cathay.html" class="line_a">
+                    <div id="line_h3">
+                        <h3>Cathay Pacific&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></h3>
+                    </div>
+                </a>
+                <div>
+                    <p id="line_p">Cathay Pacific Airways Limited is the flag carrier of Hong Kong, with its head office and main hub located at Hong Kong
+                    International Airport. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

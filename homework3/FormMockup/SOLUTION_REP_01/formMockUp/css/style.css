@@ -1,0 +1,25 @@
+/* Styling */
+
+body {
+    background-image: url('https://media.giphy.com/media/3oEhmVQaCjPOJJQgG4/giphy.gif');
+    background-size: cover;
+}
+
+.head-container {
+    margin-top: 3%;
+    font-family: 'Notable', sans-serif;
+    text-align: center;
+}
+
+.form-contain {
+    margin-top: 10%;
+    background-color: transparent;
+    width: 100%;
+    height: 250px;
+}
+
+
+.btn-container {
+    margin-left: 45%;
+    margin-top: 5%;
+}

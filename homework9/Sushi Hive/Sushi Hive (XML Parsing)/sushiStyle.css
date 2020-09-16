@@ -1,0 +1,55 @@
+body{
+    background-color: rgba(247, 202, 144, 0.993);
+    font-family: 'Black And White Picture', sans-serif;
+    margin : 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div[id="show"] div{
+    margin-left: 1%;
+    margin-bottom: 1.5%;
+   
+}
+#show{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: max-content;
+}
+#bill_msg{
+    padding: 0.5%;
+    display: inline-flex;
+    height: max-content;
+    width: 100%;
+    flex-basis: auto;
+}
+#bill_div{
+    padding: 0.5%;
+    display: inline-flex;
+    height: max-content;
+    width: max-content;
+    flex-basis: auto;
+}
+
+#show_error{
+    padding: 0.5%;
+    display: inline-flex;
+    height: max-content;
+    width: max-content;
+    flex-basis: auto;
+
+}
+
+div[id="bill_div"] input{
+    margin-left: 1%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+}
+
+div[id="bill_msg"] h3{
+    width: max-content;
+}

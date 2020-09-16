@@ -1,0 +1,29 @@
+class Advertiser{
+    var time;
+
+    constructor{
+        this.time=time;
+    }
+
+    function getTime() {
+        time = new Date();
+        return time.toLocalString();
+    }
+}
+
+class Advertiser{
+    time: number;
+    constructor(public second:number, public minute:number, public hour:number){
+        this.time = hour + ":" + minute + ":" + second;
+    }
+}
+
+interface date {
+    hour: number;
+    minute: number;
+    second: number;
+}
+
+function getTime(date: date){
+    return time;
+}

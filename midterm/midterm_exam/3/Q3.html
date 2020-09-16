@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#demo1").click(function () {
+                var content = new Date();
+                content.toLocaleString();
+                console.log(content + " " + 'demo1');
+            });
+            $("#demo2").click(function () {
+                var content = new Date();
+                content.toLocaleString();
+                console.log(content + " " + 'demo2');
+            });
+            $("#demo3").click(function () {
+                var content = new Date();
+                content.toLocaleString();
+                console.log(content + " " + 'demo3');
+            });
+            $("#demo4").click(function () {
+                var content = new Date();
+                content.toLocaleString();
+                console.log(content + " " + 'demo4');
+            });
+            $("#demo5").click(function () {
+                var content = new Date();
+                content.toLocaleString();
+                console.log(content + " " + 'demo5');
+            });
+        });
+    </script>
+</body>
+
+</html>

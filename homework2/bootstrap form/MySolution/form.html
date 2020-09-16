@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <title>Bootstrap form</title>
+    <style>
+        body{
+            font-family: Microsoft Yahei; 
+            height:2000px;
+        }
+        .col-sm-6{
+            padding:0;
+        }
+        .my-1{
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-3" style="width:60%;margin-left:300px;margin-right:200px">
+        <!--Bootstrap icon-->
+        <img src="img/icon.jpg" alt="" style="height:40px;width:40px;margin-left:auto;margin-right:auto;margin-top:20px;display:block">
+        <!--Title-->
+        <h2 style="text-align:center">Checkout form</h2>
+        <!--Introduction-->
+        <p style="text-align: center">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        <br/>
+        <div class="row">
+            <form action="">
+                <!--Left side-->
+                <div class="col-sm-8">
+                    <!--Subtitle-->
+                    <h3>Billing address</h3>
+                    <!--Name-->
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="Fname">First name</label>
+                            <input type="text" class="form-control" id="Fname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Lname">Last name</label>
+                            <input type="text" class="form-control" id="Lname">
+                        </div>
+                    </div>
+                    <!--Username-->
+                    <label for="Uname" style="margin-top:10px">Username</label><br />
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <!--Email-->
+                    <div class="form-group">
+                        <label for="Email">Email(Optional)</label>
+                        <input type="text" class="form-control" id="Email" placeholder="you@example.com">
+                    </div>
+                    <!--Address-->
+                    <div class="form-group">
+                        <label for="Add">Address</label>
+                        <input type="text" class="form-control" id="Add" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="Add2">Address 2(Optional)</label>
+                        <input type="text" class="form-control" id="Add2" placeholder="Apartment or suite">
+                    </div>
+                    <!--Country State Zip-->
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="Country">Country</label>
+                            <select class="custom-select" id="Country">
+                                <option selected>Choose...</option>
+                                <option>USA</option>
+                                <option>China</option>
+                                <option>Canada</option>
+                                <option>Japan</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="custom-select">
+                                <option selected>Choose...</option>
+                                <option>MA</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                    <hr>
+                    <!--Select-->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                        <label class="custom-control-label" for="defaultUnchecked">Shipping address is the same as my billing address</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultchecked">
+                        <label class="custom-control-label" for="defaultchecked">Save this information for next time</label>
+                    </div>
+                    <hr>
+                    <!--Subtitle-->
+                    <h3>Payment</h3>
+                    <!--Payment select-->
+                    <!-- Group of default radios - option 1 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios" checked>
+                        <label class="custom-control-label" for="defaultGroupExample1">Credit card</label>
+                    </div>
+
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="defaultGroupExample2">Debit card</label>
+                    </div>
+
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="defaultGroupExample3">Paypal</label>
+                    </div>
+                    <!--Card information-->
+                    <div class="form-row" style="margin-top:10px">
+                        <div class="form-group col-md-6">
+                            <label for="NameOnCard">Name on card</label>
+                            <input type="text" class="form-control" id="NameOnCard">
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                Full name as displayed on card
+                            </small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="CreditCardNumber">Credit card number</label>
+                            <input type="text" class="form-control" id="CreditCardNumber">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="Expiration">Expiration</label>
+                            <input type="text" class="form-control" id="Expiration">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="CVV">CVV</label>
+                            <input type="text" class="form-control" id="CVV">
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Continue to checkout</button>
+                </div>
+            </form>
+            <div class="col-sm-4">
+                <li class="list-group-item d-flex justify-content-between align-items-center" style="border:0;color:grey">
+                    Your cart
+                    <span class="badge badge-primary badge-pill" style="background-color:grey">3</span>
+                </li>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Product name</h5>
+                            <small>$12</small>
+                        </div>
+                        <small>Brief description</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Second product</h5>
+                            <small>$8</small>
+                        </div>
+                        <small>Brief description</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Third item</h5>
+                            <small>$5</small>
+                        </div>
+                        <small>Brief description</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" style="color:#28A745">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Promo code</h5>
+                            <small>-$5</small>
+                        </div>
+                        <small>EXAMPLECODE</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Total(USD)</h5>
+                            <small><strong>$20</strong></small>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" style="margin-top:10px">
+                    <div class="card-body" style="padding:3px;height:43px">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username"
+                                aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" style="background-color:gray;color:white">Reedem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

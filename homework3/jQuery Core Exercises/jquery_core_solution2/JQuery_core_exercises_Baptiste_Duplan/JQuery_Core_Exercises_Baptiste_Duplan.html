@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> JQuery Core exercise </title>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="div1">
+
+        <h1></h1>
+        <p attribute class="pclass" id="p1"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p2"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p3"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p4"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p5"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p6"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p7"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p8"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p9"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p10"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p11"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p12"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p13"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p14"></p>
+
+        <h1></h1>
+        <p attribute class="pclass" id="p15"></p>
+    </div>
+
+    <div id="div2">
+        <h1></h1>
+        <h3 attribute class="h3class" id="h3-1"></h3>
+
+        <h1></h1>
+        <h3 attribute class="h3class" id="h3-2"></h3>
+
+        <h1></h1>
+        <h3 attribute class="h3class" id="h3-3"></h3>
+    </div>
+
+    <div id="div3">
+        <h1></h1>
+        <span attribute class="spanclass" id="span1"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span2"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span3"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span4"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span5"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span6"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span7"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span8"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span9"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span10"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span11"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span12"></span>
+
+        <h1></h1>
+        <span attribute class="spanclass" id="span13"></span>
+    </div>
+
+    <footer>
+        <ul>
+            <li id="li1"></li>
+            <li id="li2"></li>
+            <li id="li3"></li>
+            <li id="li4"></li>
+            <li id="li5"></li>
+            <li id="li6"></li>
+            <li id="li7"></li>
+
+        </ul>
+    </footer>
+
+</body>
+
+<script>
+
+    $(document).ready(function () {
+
+        /*
+        class selectors
+        attribute selectors
+        element selectors
+        ID selectors
+        Direct descendant selectors
+        descendant selectors
+        Adjacency selectors
+        */
+
+        $("#li1").text("Element selecor:  " + $("p").length + " <p>, " + $("h3").length + " <h3>, " + $("span").length + " <span>.");
+        $("#li2").text("Attribute selectors:  " + $("p[attribute]").length + " <p>, " + $("h3[attribute]").length + " <h3>, " + $("span[attribute]").length + " <span>.");
+        $("#li3").text("Class selecor:  " + $(".pclass").length + " <p>, " + $(".h3class").length + " <h3>, " + $(".spanclass").length + " <span>.");
+        $("#li4").text("ID selecor:  " + $("#p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11, #p12, #p13, #p14, #p15").length + " <p>, "
+            + $("#h3-1, #h3-2, #h3-3").length + " <h3>, "
+            + $("#span1, #span2, #span3, #span4, #span5, #span6, #span7, #span8, #span9, #span10, #span11, #span12, #span13 ").length + " <span>.");
+
+        $("#li5").text("Direct descendant selecor:  " + $("#div1 > p").length + " <p>, " + $("#div2 >h3").length + " <h3>, " + $("#div3 > span").length + " <span>.");
+        $("#li6").text("Descendant selecor:  " + $("body p").length + " <p>, " + $("body h3").length + " <h3>, " + $("body span").length + " <span>.");
+        $("#li7").text("Adjacency selecor:  " + $("h1 + p").length + " <p>, " + $("h1 + h3").length + " <h3>, " + $("h1 + span").length + " <span>.");
+
+    });
+
+</script>

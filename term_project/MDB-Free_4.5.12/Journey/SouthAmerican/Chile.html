@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        a {
+            color: white;
+        }
+
+        /*nav_panel*/
+        #panel {
+            height: 300px;
+            background-color: #212121;
+            display: none;
+            color: white
+        }
+
+        #panel>.row {
+            padding: 30px;
+        }
+
+        .panel_slide {
+            border-right: 1px solid #cfd8dc;
+            float: left;
+            height: 250px;
+        }
+
+        .nav_p {
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        /*underline*/
+        .underline {
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .underline:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: all .3s;
+        }
+
+        .underline:hover:before {
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        /*top*/
+        #top {
+            background: url(../img/hainan/3.webp);
+            height: 377px;
+        }
+
+        .top2 {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            height: 100px;
+            /*margin-top:99px;*/
+        }
+
+        .top2_title {
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+
+        .top2_select {
+            margin-left: 50px;
+        }
+
+        #content {
+            margin-left: 300px;
+            height: 2000px;
+            width: 1000px;
+            margin-right: 300px;
+        }
+
+        .content_title {
+            margin-top: 50px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .img {
+            text-align: center;
+        }
+
+        #map {
+            margin: 5px;
+            width: 970px;
+            height: 600px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="../SouthAmerican.html" style="margin-left:300px">Chile</a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <form class="form-inline">
+                <div class="md-form my-0" style="margin-left:600px">
+                    <i class="fa fa-search" aria-hidden="true" style="color:white"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="flip" href="#">menu
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
+
+    <div id="panel">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="nav_p">CITY</p>
+                <a href="">
+                    <p class="underline">Guyana&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+
+                <a href="">
+                    <p class="underline">Suriname&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="Colombia.html">
+                    <p class="underline">Colombia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="Ecuador.html">
+                    <p class="underline">Ecuador&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Ecuador.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="Peru.html">
+                    <p class="underline">Peru&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="Chile.html">
+                    <p class="underline">Chile&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="Bolivia.html">
+                    <p class="underline">Bolivia&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href="Trans/Bolivia.html"><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">Uruguay&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+                <a href="">
+                    <p class="underline">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        &nbsp;&nbsp;<a href=""><i class="fa fa-plane"></i></a></p>
+                </a>
+            </div>
+            <div class="panel_slide"></div>
+            <div class="col-md-2">
+                <p class="nav_p">AIRLINE</p>
+                <a href="https://www.avianca.com/us/en/">
+                    <p class="underline">Avianca&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.latam.com/en_us/">
+                    <p class="underline">LATAM Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+                <a href="https://www.vivaair.com/co/en">
+                    <p class="underline">Viva Air&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.tame.com.ec/index.php/en/">
+                    <p class="underline">TAME&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.starperu.com/es/#">
+                    <p class="underline">Star Perú&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="https://www.peruvian.pe/pe/world">
+                    <p class="underline">Peruvian Airlines&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.skyairline.com/english">
+                    <p class="underline">Sky Airline&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://jetsmart.com/cl/es/">
+                    <p class="underline">JetSmart&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="http://dapairline.com/">
+                    <p class="underline">Aerovías DAP&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://www.boa.bo/BoAWebSite/">
+                    <p class="underline">Boliviana De Aviacion&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <br>
+                <a href="https://www.amaszonas.com/en-us/">
+                    <p class="underline">Línea Aérea Amaszonas&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+                <a href="https://www.aerolineas.com.ar/">
+                    <p class="underline">Aerolíneas Argentinas&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+                <a href="https://www.flyslm.com/en/">
+                    <p class="underline">Surinam Airways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="https://flyallways.com/">
+                    <p class="underline">Fly All Ways&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+                </a>
+                <a href="">
+                    <p class="underline">FlyMontserrat&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="top" class="container-fluid">
+        <div class="row" style="height:280px;">
+
+        </div>
+        <div class="row top2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 top2_title">
+                        <h2>Chile</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content_title">
+                    <h1>Domestic Transportations</h1>
+                    <div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th width="200px">Traveling Option</th>
+                                    <th>Departure-Arrive</th>
+                                    <th>Aireline</th>
+                                    <th>Price</th>
+                                    <th width="150px">Show on the map</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5" style="vertical-align:middle">Start at Esmeraldas</td>
+                                    <td>From Esmeraldas to Quito</td>
+                                    <td>TAME</td>
+                                    <td>$66</td>
+                                    <td rowspan="5" style="vertical-align:middle">
+                                        <button type="button" class="btn btn-primary" style="margin:0;margin-left:10px;"
+                                            id="esm">Show</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>From Quito to Guayaquil</td>
+                                    <td>TAME/LATAM Ecuador</td>
+                                    <td>$44</td>
+                                </tr>
+                                <tr>
+                                    <td>From Guayaquil to Quito</td>
+                                    <td>Avianca Ecuador</td>
+                                    <td>$45</td>
+                                </tr>
+                                <tr>
+                                    <td>From Quito to Cuenca</td>
+                                    <td>TAME</td>
+                                    <td>$43</td>
+                                </tr>
+                                <tr>
+                                    <td>From Cuenca to Quito</td>
+                                    <td>TAME/LATAM Ecuador</td>
+                                    <td>$31/$34</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content_title">
+                    <h1>International Transportations</h1>
+
+                    <h2>From the Bolivia to Chile</h2>
+                    <iframe src="InnerMap/BO-CH.html" frameborder="1" height="600" width="970"></iframe>
+                    <h2>From the Chile to Uruguay</h2>
+                    <iframe src="InnerMap/CH-UR.html" frameborder="1" height="600" width="970"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../js/mdb.min.js"></script>
+
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {
+                    lat: -16,
+                    lng: -67
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var flightPlanCoordinates = [{
+                    lat: -16.513333,
+                    lng: -68.192222,
+                    code: 'El Alto International Airport'
+                }, /*LPB*/
+                {
+                    lat: -17.644722,
+                    lng: -63.135278,
+                    code: 'Viru Viru International Airport'
+                },
+                {
+                    lat: -11.040278,
+                    lng: -68.783333,
+                    code: 'Captain Aníbal Arab Airport'
+                },
+                {
+                    lat: -14.820833,
+                    lng: -64.916667,
+                    code: 'Teniente Jorge Henrich Arauz Airport'
+                },
+                {
+                    lat: -17.420833,
+                    lng: -66.176944,
+                    code: 'Jorge Wilstermann International Airport'
+                },
+                {
+                    lat: -19.246667,
+                    lng: -65.149444,
+                    code: 'Alcantarí Airport'
+                },
+                {
+                    lat: -21.555556,
+                    lng: -64.701389,
+                    code: 'Capitán Oriel Lea Plaza Airport'
+                },
+                {
+                    lat: -20.443056,
+                    lng: -66.854167,
+                    code: 'Uyuni Airport'
+                },
+                {
+                    lat: -14.425,
+                    lng: -67.501389,
+                    code: 'Rurrenabaque Airport'
+                },
+            ];
+
+            var infowindow = new google.maps.InfoWindow();
+
+            for (var i = 0; i < 8; i++) {
+
+                var currentPath = [];
+                currentPath.push(flightPlanCoordinates[0])
+                currentPath.push(flightPlanCoordinates[i + 1]);
+                var temp = flightPlanCoordinates[i + 1].code;
+
+                //var location = new google.maps.LatLng(currentPath.lat, currentPath.lng);
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 0.5
+                });
+                var marker = new google.maps.Marker({
+                    position: flightPlanCoordinates[i + 1],
+                    map: map,
+                    title: flightPlanCoordinates[i + 1].code
+                });
+                addContent(marker, temp, infowindow);
+                flightPath.setMap(map);
+            }
+
+            for (var i = 0; i < 7; i++) {
+                var currentPath = [];
+                currentPath.push(flightPlanCoordinates[1])
+                currentPath.push(flightPlanCoordinates[i]);
+                var temp = flightPlanCoordinates[i].code;
+
+                var flightPath = new google.maps.Polyline({
+                    path: currentPath,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1,
+                    strokeWeight: 0.5
+                });
+
+                var marker = new google.maps.Marker({
+                    position: flightPlanCoordinates[i],
+                    map: map,
+                    title: flightPlanCoordinates[i].code
+                });
+
+                addContent(marker, temp, infowindow);
+                flightPath.setMap(map);
+            }
+        }
+
+        function addContent(marker, temp, infowindow) {
+            var contentString = '<div>' + temp + '</div>';
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.setContent(contentString);
+                infowindow.open(map, marker);
+            })
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=initMap&language=en">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

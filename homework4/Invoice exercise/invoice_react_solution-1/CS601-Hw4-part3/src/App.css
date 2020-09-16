@@ -1,0 +1,101 @@
+.App {
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Invoice{
+  width: 300px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.Control{
+  margin: 10px;
+
+}
+
+.Control-title{
+  margin-right: 10px;
+}
+
+.Control-input{
+  float: right;
+}
+
+.Button{
+  margin-left: 10px;
+
+}
+
+.List{
+
+  margin-left: 10px;
+}
+
+.ItemTable{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.th{
+  background: #000;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+}
+
+.td{
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.State{
+  color: red;
+  margin: 10px;
+}
+
+.Title{
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
+
+.PartNumber{
+  text-align: center;
+}
+
+.Bottom{
+  display: flex;
+  flex-direction: column;
+}
+
+.FloatRight{
+  float: right;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var c = 0
+        var m = 0
+        var h = 0
+        var t
+
+        function timedCount() {
+            
+            /*document.getElementById('minutes').innerHTML = m
+            document.getElementById('hours').innerHTML = h*/
+            c = c + 1
+            if (c >= 60) {
+                c = 0
+                m = m + 1
+                if (m >= 60){
+                    m = 0
+                    h = h + 1
+                }
+            }
+document.getElementById('time').innerHTML = h + ":" + m + ":" + c
+            t = setTimeout("timedCount()", 1000)
+        }
+
+        function stopCount() {
+            clearTimeout(t)
+        }
+
+        function clear() {
+            c = 0
+            m = 0
+            h = 0
+document.getElementById('seconds').innerHTML = c
+document.getElementById('minutes').value = m
+document.getElementById('hours').value = h
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="start" onClick="timedCount()">
+        <div id="time">00:00:00</div>
+        <input type="button" value="stop" onClick="stopCount()">
+        <input type="button" value="reset" onClick="clear()">
+    </form>
+</body>
+
+</html>

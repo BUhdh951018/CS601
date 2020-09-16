@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Contact form</title>
+    <style>
+        body{
+            background-color:#19A2C9;
+            color:white;
+            /*width:50%;*/
+        }
+        .row{
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 style="color:white">Contact form</h1>
+        <br/>
+        <p>Please fill in your information and we'll be sending your order in no time.</p>
+        <form action="" style="margin-top:60px">
+            <div class="row">
+                <div class="col-sm-1">
+                    Your Name 
+                </div>
+                <div class="col-sm-11">
+                    <input type="text" style="width:150px;margin-right:15px" placeholder="First Name"><input type="text" style="width:150px" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1">
+                    Your Email
+                </div>
+                <div class="col-sm-11"> 
+                <input type="text" style="width:315px" placeholder="e.g.hello@contact.net">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1">
+                    Phone*
+                </div>
+                <div class="col-sm-11">
+                    <input type="text" style="width:95px;margin-right:12px;" placeholder="###"> 
+                    <input type="text" style="width:95px;margin-right:12px;" placeholder="###">
+                    <input type="text" style="width:95px" placeholder="###">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1">
+                    Message Subject*
+                </div>
+                <div class="col-sm-11">
+                    <select class="form-control" name="" id="" style="width:210px">
+                        <option value="other" >other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1">
+                    Message*
+                </div>
+                <div class="col-sm-11">
+                    <textarea name="" id="" cols="41" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1">
+                    Verification*
+                </div>
+                <div class="col-sm-11">
+                    <input type="checkbox" name="" id="" style="height:15px;width:15px;">I'm not a robot
+                </div>
+            </div>
+            <hr>
+            <button type="submit button" class="btn btn-outline-primary" style="color:white;border-color: white;height:50px;width:180px">SUBMIT FORM</button>
+        </form>
+    </div>
+</body>
+</html>

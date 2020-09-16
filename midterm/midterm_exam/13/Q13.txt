@@ -1,0 +1,16 @@
+1.function(a,b) { console.log(a,b);}
+2.var myFunction = function(a,b,c) {console.log(a,b,c);}
+3.function() { console.log('foo');}
+
+convert arrow functions:
+1.(a,b) => console.log(a,b);
+
+2.var myFunction = [
+    a,
+    b,
+    c
+];
+
+console.log(myFunction.map(myFunction => myFunction.length));
+
+3.() => console.log('foo');
